@@ -9,3 +9,4 @@ https://docs.google.com/drawings/d/1n7EGZ9A0k2M9tfJ_Qxxmh7J4cW1yKGQGNUjfBGRrGC4/
 - Start getting questions ready for Client to clear up ambiguity 
 - Verify types of data we will need to keep track of
 - Assign who will talk to client
+
