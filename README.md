@@ -1,6 +1,6 @@
 # IHSAINC ~ IOS
 The IOS group for software engineering IHSAINC project
-https://discord.gg/xZn2nbqz\n
+https://discord.gg/xZn2nbqz
 Google drawing/UML link:
 https://docs.google.com/drawings/d/1n7EGZ9A0k2M9tfJ_Qxxmh7J4cW1yKGQGNUjfBGRrGC4/edit?usp=sharing
 
