@@ -23,11 +23,9 @@ class ViewController: UIViewController {
         ]
         return menu
     }()
-    menu.layoutMargins(
     override func viewDidLoad() {
         super.viewDidLoad()
         let myView = UIView(frame: navigationController?.navigationBar.frame ?? .zero)
-        myView.backgroundColor = .red
         navigationController?.navigationBar.topItem?.titleView = myView
         guard let topView = navigationController?.navigationBar.topItem?.titleView else{
             return

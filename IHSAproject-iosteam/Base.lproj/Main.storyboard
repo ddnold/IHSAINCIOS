@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--dropdown-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IHSAproject_iosteam" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,7 +34,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Ruo-zd-8of" customClass="Dropdown"/>
+                    <navigationItem key="navigationItem" title="dropdown" prompt="View shows" style="browser" id="Ruo-zd-8of" customClass="Dropdown"/>
                     <connections>
                         <outlet property="ihsaImg" destination="e2c-1T-79s" id="YEY-lL-Zsf"/>
                     </connections>
@@ -63,9 +63,13 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="exq-WL-pVr" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6X5-uX-WgV">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6X5-uX-WgV">
                         <rect key="frame" x="0.0" y="48" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
