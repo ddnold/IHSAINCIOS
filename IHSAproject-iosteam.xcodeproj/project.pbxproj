@@ -73,8 +73,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		375E09A62990C595001EDFA5 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "IHSAproject-iosteamTests.xctest"; path = "/Users/s532534/Documents/GitHub/ISHAINCIOS/build/Debug-iphoneos/IHSAproject-iosteamTests.xctest"; sourceTree = "<absolute>"; };
+		375E09A72990C595001EDFA5 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "IHSAproject-iosteamUITests.xctest"; path = "/Users/s532534/Documents/GitHub/ISHAINCIOS/build/Debug-iphoneos/IHSAproject-iosteamUITests.xctest"; sourceTree = "<absolute>"; };
+		375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IHSAproject-iosteam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		379170B0298FAFC800344BA5 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = "../../../Downloads/DropDown-master/DropDown.xcodeproj"; sourceTree = "<group>"; };
-		379170BE298FB07D00344BA5 /* IHSAproject-iosteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IHSAproject-iosteam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB3EFE32980701A00DFC224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3FB3EFE72980701A00DFC224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,9 +84,7 @@
 		3FB3EFEC2980701B00DFC224 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3FB3EFEF2980701B00DFC224 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3FB3EFF12980701B00DFC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3FB3EFF62980701B00DFC224 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "IHSAproject-iosteamTests.xctest"; path = "/Users/s532534/Documents/GitHub/ISHAINCIOS/build/Debug-iphoneos/IHSAproject-iosteamTests.xctest"; sourceTree = "<absolute>"; };
 		3FB3EFFA2980701B00DFC224 /* IHSAproject_iosteamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamTests.swift; sourceTree = "<group>"; };
-		3FB3F0002980701B00DFC224 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "IHSAproject-iosteamUITests.xctest"; path = "/Users/s532534/Documents/GitHub/ISHAINCIOS/build/Debug-iphoneos/IHSAproject-iosteamUITests.xctest"; sourceTree = "<absolute>"; };
 		3FB3F0042980701B00DFC224 /* IHSAproject_iosteamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITests.swift; sourceTree = "<group>"; };
 		3FB3F0062980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,7 +140,7 @@
 				3FB3EFF92980701B00DFC224 /* IHSAproject-iosteamTests */,
 				3FB3F0032980701B00DFC224 /* IHSAproject-iosteamUITests */,
 				37917093298FA04200344BA5 /* Frameworks */,
-				379170BE298FB07D00344BA5 /* IHSAproject-iosteam.app */,
+				375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -193,7 +193,7 @@
 			);
 			name = "IHSAproject-iosteam";
 			productName = "IHSAproject-iosteam";
-			productReference = 379170BE298FB07D00344BA5 /* IHSAproject-iosteam.app */;
+			productReference = 375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3FB3EFF52980701B00DFC224 /* IHSAproject-iosteamTests */ = {
@@ -211,7 +211,7 @@
 			);
 			name = "IHSAproject-iosteamTests";
 			productName = "IHSAproject-iosteamTests";
-			productReference = 3FB3EFF62980701B00DFC224 /* IHSAproject-iosteamTests.xctest */;
+			productReference = 375E09A62990C595001EDFA5 /* IHSAproject-iosteamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3FB3EFFF2980701B00DFC224 /* IHSAproject-iosteamUITests */ = {
@@ -229,7 +229,7 @@
 			);
 			name = "IHSAproject-iosteamUITests";
 			productName = "IHSAproject-iosteamUITests";
-			productReference = 3FB3F0002980701B00DFC224 /* IHSAproject-iosteamUITests.xctest */;
+			productReference = 375E09A72990C595001EDFA5 /* IHSAproject-iosteamUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -521,6 +521,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -548,6 +549,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

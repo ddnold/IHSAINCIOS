@@ -12,41 +12,33 @@ class ViewController: UIViewController {
     
     //ihsalabel
     @IBOutlet weak var ihsaImg: UIImageView!
+    @IBOutlet weak var myDropDownView: UIView!
+    @IBOutlet weak var dropDownButton: UIButton!
+    @IBOutlet weak var showLabel: UILabel!
     
-    let menu: DropDown = {
-        let menu = DropDown()
-        menu.dataSource = [
-            "show1",
-            "show2",
-            "show3",
-            "show4"
-        ]
-        return menu
-    }()
+    let myDropDown = DropDown()
+    var shows = ["show1","show2","show3"]
+    
+    @IBAction func isTappedDropDownButton(_ sender: Any) {
+        myDropDown.show()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let myView = UIView(frame: navigationController?.navigationBar.frame ?? .zero)
-        navigationController?.navigationBar.topItem?.titleView = myView
-        guard let topView = navigationController?.navigationBar.topItem?.titleView else{
-            return
-        }
         
-        menu.anchorView = topView
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(didTapTopItem))
-        gesture.numberOfTapsRequired = 1
-        gesture.numberOfTouchesRequired = 1
-        topView.addGestureRecognizer(gesture)
+        myDropDown.anchorView = myDropDownView
+        myDropDown.dataSource = shows
         
-        menu.selectionAction = {index, title in
-            print("index \(index) and \(title)")
+        myDropDown.bottomOffset = CGPoint(x: 0, y: (myDropDown.anchorView?.plainView.bounds.height)!)
+        myDropDown.topOffset = CGPoint(x: 0, y: -(myDropDown.anchorView?.plainView.bounds.height)!)
+        myDropDown.direction = .bottom
+        
+        myDropDown.selectionAction = { (index: Int, item: String) in self.showLabel.text = self.shows[index]
+            self.showLabel.textColor = .black
+            print("index \(index) and \(item)")
         }
     }
-    
-    @objc func didTapTopItem() {
-        menu.show()
-    }
-    
-    }
+}
     
     
     
