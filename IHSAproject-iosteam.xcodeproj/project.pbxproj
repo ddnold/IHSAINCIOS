@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		379170BC298FB07D00344BA5 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 379170BB298FAFC800344BA5 /* DropDown.framework */; };
-		379170BD298FB07D00344BA5 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 379170BB298FAFC800344BA5 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		374E30A62991C344007A4CD1 /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 374E30A52991C330007A4CD1 /* DropDown.framework */; };
+		374E30A72991C344007A4CD1 /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 374E30A52991C330007A4CD1 /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3FB3EFE42980701A00DFC224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFE32980701A00DFC224 /* AppDelegate.swift */; };
 		3FB3EFE62980701A00DFC224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */; };
 		3FB3EFE82980701A00DFC224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFE72980701A00DFC224 /* ViewController.swift */; };
@@ -21,23 +21,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		379170B6298FAFC800344BA5 /* PBXContainerItemProxy */ = {
+		374E30A02991C330007A4CD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 379170B0298FAFC800344BA5 /* DropDown.xcodeproj */;
+			containerPortal = 374E309A2991C330007A4CD1 /* DropDown.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0A76440F1B676C2300BF1A2D;
 			remoteInfo = Demo;
 		};
-		379170B8298FAFC800344BA5 /* PBXContainerItemProxy */ = {
+		374E30A22991C330007A4CD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 379170B0298FAFC800344BA5 /* DropDown.xcodeproj */;
+			containerPortal = 374E309A2991C330007A4CD1 /* DropDown.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0A7644241B676C2300BF1A2D;
 			remoteInfo = DropDownTests;
 		};
-		379170BA298FAFC800344BA5 /* PBXContainerItemProxy */ = {
+		374E30A42991C330007A4CD1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 379170B0298FAFC800344BA5 /* DropDown.xcodeproj */;
+			containerPortal = 374E309A2991C330007A4CD1 /* DropDown.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 0AB5D8711D0EEECD002D3A17;
 			remoteInfo = DropDown;
@@ -59,13 +59,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		379170AE298FA20500344BA5 /* Embed Frameworks */ = {
+		374E30A82991C344007A4CD1 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				379170BD298FB07D00344BA5 /* DropDown.framework in Embed Frameworks */,
+				374E30A72991C344007A4CD1 /* DropDown.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,10 +73,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		375E09A62990C595001EDFA5 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "IHSAproject-iosteamTests.xctest"; path = "/Users/s532534/Documents/GitHub/ISHAINCIOS/build/Debug-iphoneos/IHSAproject-iosteamTests.xctest"; sourceTree = "<absolute>"; };
-		375E09A72990C595001EDFA5 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "IHSAproject-iosteamUITests.xctest"; path = "/Users/s532534/Documents/GitHub/ISHAINCIOS/build/Debug-iphoneos/IHSAproject-iosteamUITests.xctest"; sourceTree = "<absolute>"; };
+		374E309A2991C330007A4CD1 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = "DropDown-master/DropDown.xcodeproj"; sourceTree = "<group>"; };
 		375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IHSAproject-iosteam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		379170B0298FAFC800344BA5 /* DropDown.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DropDown.xcodeproj; path = "../../../Downloads/DropDown-master/DropDown.xcodeproj"; sourceTree = "<group>"; };
+		37A13FED2991C0F6001D5445 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A13FEE2991C0F6001D5445 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FB3EFE32980701A00DFC224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3FB3EFE72980701A00DFC224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				379170BC298FB07D00344BA5 /* DropDown.framework in Frameworks */,
+				374E30A62991C344007A4CD1 /* DropDown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +115,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374E309B2991C330007A4CD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				374E30A12991C330007A4CD1 /* Demo.app */,
+				374E30A32991C330007A4CD1 /* DropDownTests.xctest */,
+				374E30A52991C330007A4CD1 /* DropDown.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		37917093298FA04200344BA5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -122,25 +132,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		379170B1298FAFC800344BA5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				379170B7298FAFC800344BA5 /* Demo.app */,
-				379170B9298FAFC800344BA5 /* DropDownTests.xctest */,
-				379170BB298FAFC800344BA5 /* DropDown.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		3FB3EFD72980701A00DFC224 = {
 			isa = PBXGroup;
 			children = (
-				379170B0298FAFC800344BA5 /* DropDown.xcodeproj */,
+				374E309A2991C330007A4CD1 /* DropDown.xcodeproj */,
 				3FB3EFE22980701A00DFC224 /* IHSAproject-iosteam */,
 				3FB3EFF92980701B00DFC224 /* IHSAproject-iosteamTests */,
 				3FB3F0032980701B00DFC224 /* IHSAproject-iosteamUITests */,
 				37917093298FA04200344BA5 /* Frameworks */,
 				375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */,
+				37A13FED2991C0F6001D5445 /* IHSAproject-iosteamTests.xctest */,
+				37A13FEE2991C0F6001D5445 /* IHSAproject-iosteamUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -185,7 +187,7 @@
 				3FB3EFDC2980701A00DFC224 /* Sources */,
 				3FB3EFDD2980701A00DFC224 /* Frameworks */,
 				3FB3EFDE2980701A00DFC224 /* Resources */,
-				379170AE298FA20500344BA5 /* Embed Frameworks */,
+				374E30A82991C344007A4CD1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -211,7 +213,7 @@
 			);
 			name = "IHSAproject-iosteamTests";
 			productName = "IHSAproject-iosteamTests";
-			productReference = 375E09A62990C595001EDFA5 /* IHSAproject-iosteamTests.xctest */;
+			productReference = 37A13FED2991C0F6001D5445 /* IHSAproject-iosteamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3FB3EFFF2980701B00DFC224 /* IHSAproject-iosteamUITests */ = {
@@ -229,7 +231,7 @@
 			);
 			name = "IHSAproject-iosteamUITests";
 			productName = "IHSAproject-iosteamUITests";
-			productReference = 375E09A72990C595001EDFA5 /* IHSAproject-iosteamUITests.xctest */;
+			productReference = 37A13FEE2991C0F6001D5445 /* IHSAproject-iosteamUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -268,8 +270,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 379170B1298FAFC800344BA5 /* Products */;
-					ProjectRef = 379170B0298FAFC800344BA5 /* DropDown.xcodeproj */;
+					ProductGroup = 374E309B2991C330007A4CD1 /* Products */;
+					ProjectRef = 374E309A2991C330007A4CD1 /* DropDown.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -282,25 +284,25 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		379170B7298FAFC800344BA5 /* Demo.app */ = {
+		374E30A12991C330007A4CD1 /* Demo.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = Demo.app;
-			remoteRef = 379170B6298FAFC800344BA5 /* PBXContainerItemProxy */;
+			remoteRef = 374E30A02991C330007A4CD1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		379170B9298FAFC800344BA5 /* DropDownTests.xctest */ = {
+		374E30A32991C330007A4CD1 /* DropDownTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = DropDownTests.xctest;
-			remoteRef = 379170B8298FAFC800344BA5 /* PBXContainerItemProxy */;
+			remoteRef = 374E30A22991C330007A4CD1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		379170BB298FAFC800344BA5 /* DropDown.framework */ = {
+		374E30A52991C330007A4CD1 /* DropDown.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = DropDown.framework;
-			remoteRef = 379170BA298FAFC800344BA5 /* PBXContainerItemProxy */;
+			remoteRef = 374E30A42991C330007A4CD1 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
