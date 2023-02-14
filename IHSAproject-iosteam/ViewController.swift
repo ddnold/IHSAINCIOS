@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import DropDown
 
 class ViewController: UIViewController {
     
@@ -27,9 +26,22 @@ class ViewController: UIViewController {
         self.tableView.isHidden = true
 
         }
+    //TODO: Link these buttons to our pages once we have them all together
+    @IBAction func generalInfoBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func annoucementBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func homeBtn(_ sender: UIButton) {
+    }
+    
+    @IBAction func riderBtn(_ sender: UIButton) {
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+    //TODO: interact with displayed elements in table to switch to different view that displays show descriptions
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return filteredData.count
@@ -46,11 +58,12 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension ViewController: UISearchBarDelegate{
     
+    //TODO: Clear tableview when searchbar clear is pushed
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        self.tableView.isHidden = true
+        tableView.isHidden = true
+        filteredData = []
+        tableView.reloadData()
     }
-    
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         self.tableView.isHidden = false
         filteredData = []
@@ -64,8 +77,9 @@ extension ViewController: UISearchBarDelegate{
             }
         }
         self.tableView.reloadData()
-        
     }
+    
+    
 }
     
     

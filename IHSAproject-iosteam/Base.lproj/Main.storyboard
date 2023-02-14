@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,22 +17,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ihsa-stacked-logo" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-1T-79s">
-                                <rect key="frame" x="32" y="68" width="342" height="149"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ihsa-stacked-logo" translatesAutoresizingMaskIntoConstraints="NO" id="e2c-1T-79s">
+                                <rect key="frame" x="32" y="64" width="342" height="149"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="xf8-vH-t94">
-                                <rect key="frame" x="0.0" y="217" width="414" height="56"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xf8-vH-t94">
+                                <rect key="frame" x="0.0" y="213" width="414" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="pDz-FC-6sC"/>
                                 </connections>
                             </searchBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-5a-p18">
-                                <rect key="frame" x="0.0" y="273" width="414" height="589"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-5a-p18">
+                                <rect key="frame" x="0.0" y="264" width="414" height="535"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="YdW-W4-kkX">
-                                        <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YdW-W4-kkX" id="bfJ-yL-2RH">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -41,23 +44,53 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YaN-w4-BOJ">
+                                <rect key="frame" x="226" y="811" width="63" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.88166824489999995" green="0.26730795039999999" blue="0.27840022889999999" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="">
+                                    <imageReference key="image" image="homekit" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                    <color key="baseForegroundColor" red="0.88166824489999995" green="0.26730795039999999" blue="0.27840022889999999" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="homeBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xJV-O9-2qp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EcW-Y9-mJn">
+                                <rect key="frame" x="20" y="813" width="70" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.88166824489999995" green="0.26730795039999999" blue="0.27840022889999999" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="tray.full.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="generalInfoBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70M-G4-aIP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6S-kK-t2R">
+                                <rect key="frame" x="127" y="812" width="70" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.88166824489999995" green="0.26730795039999999" blue="0.27840022889999999" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.stack.3d.up.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="annoucementBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8gS-iO-4sv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRt-xY-CJU">
+                                <rect key="frame" x="321" y="812" width="73" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.88166824489999995" green="0.26730795039999999" blue="0.27840022889999999" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="person.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="riderBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mAv-2D-fzd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZUZ-5a-p18" secondAttribute="trailing" id="3Un-B8-ngP"/>
-                            <constraint firstItem="ZUZ-5a-p18" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6zE-Xi-Thv"/>
-                            <constraint firstItem="e2c-1T-79s" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="B18-nb-Iad"/>
-                            <constraint firstItem="ZUZ-5a-p18" firstAttribute="top" secondItem="xf8-vH-t94" secondAttribute="bottom" id="BbG-7s-p9a"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZUZ-5a-p18" secondAttribute="bottom" id="FPL-HR-7hZ"/>
-                            <constraint firstItem="xf8-vH-t94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LDu-5I-cJa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e2c-1T-79s" secondAttribute="trailing" constant="40" id="Qdy-8c-Rw1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xf8-vH-t94" secondAttribute="trailing" id="Qnz-9C-niT"/>
-                            <constraint firstItem="xf8-vH-t94" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gZp-ui-qXh"/>
-                            <constraint firstItem="e2c-1T-79s" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="80" id="kZs-mO-9It"/>
-                            <constraint firstItem="xf8-vH-t94" firstAttribute="top" secondItem="e2c-1T-79s" secondAttribute="bottom" id="n8e-q2-Udn"/>
-                            <constraint firstItem="e2c-1T-79s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="rMV-P1-ENC"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="ihsaImg" destination="e2c-1T-79s" id="YEY-lL-Zsf"/>
@@ -69,24 +102,13 @@
             </objects>
             <point key="canvasLocation" x="2765.217391304348" y="117.85714285714285"/>
         </scene>
-        <!--Announcment View Controller-->
-        <scene sceneID="Uq5-CW-vVc">
-            <objects>
-                <viewController id="hRA-c9-180" userLabel="Announcment View Controller" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KT9-Ca-QY4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="7lI-PG-wdH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aiW-cE-GGm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-583" y="-555"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="ihsa-stacked-logo" width="496" height="149"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.stack.3d.up.fill" catalog="system" width="128" height="124"/>
+        <image name="tray.full.fill" catalog="system" width="128" height="88"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
