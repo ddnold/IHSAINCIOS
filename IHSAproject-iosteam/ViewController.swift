@@ -25,6 +25,20 @@ class ViewController: UIViewController {
         filteredData = data
 
         }
+    
+    //TODO: Link buttons to views once pages are ready.
+    //General info view button
+    @IBAction func genInfoBtn(_ sender: UIButton) {
+    }
+    //announcments button view
+    @IBAction func announcmentBtn(_ sender: UIButton) {
+    }
+    //Home button view
+    @IBAction func homeBtn(_ sender: UIButton) {
+    }
+    //Rider information view
+    @IBAction func riderinfoBtn(_ sender: UIButton) {
+    }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
