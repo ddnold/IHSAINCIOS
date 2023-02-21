@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37A6251129A54D8E00FDF95F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6251029A54D8E00FDF95F /* DetailViewController.swift */; };
 		3FB3EFE42980701A00DFC224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFE32980701A00DFC224 /* AppDelegate.swift */; };
 		3FB3EFE62980701A00DFC224 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */; };
 		3FB3EFE82980701A00DFC224 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFE72980701A00DFC224 /* ViewController.swift */; };
@@ -52,6 +53,7 @@
 		375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IHSAproject-iosteam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A13FED2991C0F6001D5445 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A13FEE2991C0F6001D5445 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37A6251029A54D8E00FDF95F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		3FB3EFE32980701A00DFC224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		3FB3EFE72980701A00DFC224 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				3FB3EFE32980701A00DFC224 /* AppDelegate.swift */,
 				3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */,
 				3FB3EFE72980701A00DFC224 /* ViewController.swift */,
+				37A6251029A54D8E00FDF95F /* DetailViewController.swift */,
 				3FB3EFE92980701A00DFC224 /* Main.storyboard */,
 				3FB3EFEC2980701B00DFC224 /* Assets.xcassets */,
 				3FB3EFEE2980701B00DFC224 /* LaunchScreen.storyboard */,
@@ -275,6 +278,7 @@
 				3FB3EFE82980701A00DFC224 /* ViewController.swift in Sources */,
 				3FB3EFE42980701A00DFC224 /* AppDelegate.swift in Sources */,
 				3FB3EFE62980701A00DFC224 /* SceneDelegate.swift in Sources */,
+				37A6251129A54D8E00FDF95F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

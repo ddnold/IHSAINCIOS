@@ -50,6 +50,19 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+            // Get the selected cell and its text label
+            let cell = tableView.cellForRow(at: indexPath)
+            guard let textLabel = cell?.textLabel else { return }
+            
+            // Show a new view with the selected text as the title
+            guard let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        detailViewController.title = textLabel.text
+        navigationController?.pushViewController(detailViewController, animated: true)
+
+        
+    }
+    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if !scrollView.isScrollEnabled {
             scrollView.isScrollEnabled = true
@@ -82,7 +95,7 @@ extension ViewController: UISearchBarDelegate{
     }
 }
     
-    
+
     
 
 
