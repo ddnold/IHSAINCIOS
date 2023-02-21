@@ -6,12 +6,15 @@
 //
 
 import UIKit
+import PhotosUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController{
     
     //ihsalabel
-    @IBOutlet weak var ihsaImg: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var searchBar: UISearchBar!
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -25,6 +28,7 @@ class ViewController: UIViewController {
         filteredData = data
         tableView.backgroundColor = .blue // or any other color
         tableView.bounces = true
+        setupImageSlider()
 
         }
     
@@ -35,6 +39,52 @@ class ViewController: UIViewController {
     
     @IBAction func favoriteBTN(_ sender: Any) {
     }
+    var imageArray = [UIImage]()
+    var currentIndex = 0
+    func setupImageSlider() {
+        // Add images to the imageArray
+        //imageArray = [UIImage(named: "image1")!.resize(to: CGSize(width: 400, height: 200)),
+            //UIImage(named: "image2")!,
+            //UIImage(named: "image3")!]
+        if let image = UIImage(named: "image1") {
+            if let resizedImage = image.resize(to: CGSize(width: 400, height: 150)) {
+                imageArray.append(resizedImage)
+            }
+        }
+        if let image = UIImage(named: "image2") {
+            if let resizedImage = image.resize(to: CGSize(width: 400, height: 150)) {
+                imageArray.append(resizedImage)
+            }
+        }
+        if let image = UIImage(named: "image3") {
+            if let resizedImage = image.resize(to: CGSize(width: 400, height: 150)) {
+                imageArray.append(resizedImage)
+            }
+        }
+        // Set the initial image
+        imageView.image = imageArray[currentIndex]
+            
+        // Start the auto slideshow
+        startSlideshow()
+        }
+        
+        func startSlideshow() {
+            Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] timer in
+                guard let self = self else { return }
+                
+                self.currentIndex += 1
+                
+                if self.currentIndex >= self.imageArray.count {
+                    self.currentIndex = 0
+                }
+                
+                UIView.transition(with: self.imageView,
+                                  duration: 0.5,
+                                  options: .transitionCrossDissolve,
+                                  animations: { self.imageView.image = self.imageArray[self.currentIndex] },
+                                  completion: nil)
+            }
+        }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
@@ -94,7 +144,14 @@ extension ViewController: UISearchBarDelegate{
         
     }
 }
-    
+extension UIImage {
+    func resize(to size: CGSize) -> UIImage? {
+        let renderer = UIGraphicsImageRenderer(size: size)
+        return renderer.image { _ in
+            self.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
+}
 
     
 
