@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let data = ["show1","show2","show3","show4"]
+    let data = ["show1","show2","show3","show4","1","2","3","4","5","6","7","8"]
     var filteredData: [String]!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,36 +23,39 @@ class ViewController: UIViewController {
         tableView.dataSource = self
         searchBar.delegate = self
         filteredData = data
+        tableView.backgroundColor = .blue // or any other color
+        tableView.bounces = true
 
         }
     
-    //TODO: Link buttons to views once pages are ready.
-    //General info view button
-    @IBAction func genInfoBtn(_ sender: UIButton) {
+    @IBAction func announcementBTN(_ sender: Any) {
     }
-    //announcments button view
-    @IBAction func announcmentBtn(_ sender: UIButton) {
+    @IBAction func actionBTN(_ sender: Any) {
     }
-    //Home button view
-    @IBAction func homeBtn(_ sender: UIButton) {
-    }
-    //Rider information view
-    @IBAction func riderinfoBtn(_ sender: UIButton) {
+    
+    @IBAction func favoriteBTN(_ sender: Any) {
     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
+ 
         return filteredData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
         cell.textLabel?.text = filteredData[indexPath.row]
         return cell
     }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        if !scrollView.isScrollEnabled {
+            scrollView.isScrollEnabled = true
+        }
+    }
+
     
 }
 
