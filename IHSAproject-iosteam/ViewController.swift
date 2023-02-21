@@ -26,7 +26,7 @@ class ViewController: UIViewController{
         tableView.dataSource = self
         searchBar.delegate = self
         filteredData = data
-        tableView.backgroundColor = .blue // or any other color
+        tableView.backgroundColor = .white // or any other color
         tableView.bounces = true
         setupImageSlider()
 
