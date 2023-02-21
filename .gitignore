@@ -35,3 +35,4 @@ fastlane/screenshots/**/*.png
 
 # Provisioning profiles
 *.mobileprovision
+.DS_Store
