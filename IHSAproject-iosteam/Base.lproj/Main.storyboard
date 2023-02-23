@@ -251,29 +251,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-hB-HBe">
-                                <rect key="frame" x="20" y="92" width="377" height="681"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gCN-hB-HBe">
+                                <rect key="frame" x="20" y="92" width="383" height="596.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcement" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5O7-Wh-Yc5">
-                                        <rect key="frame" x="0.0" y="0.0" width="377" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Announcemnets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeU-74-es9">
+                                        <rect key="frame" x="113.5" y="0.0" width="156.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5t4-pR-PqR">
-                                        <rect key="frame" x="0.0" y="36" width="377" height="645"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="MhD-Ar-GyA">
+                                        <rect key="frame" x="0.0" y="26.5" width="383" height="570"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KEi-uM-zqf">
+                                                <rect key="frame" x="0.0" y="50" width="383" height="43.5"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KEi-uM-zqf" id="JvT-Uo-a3N">
+                                                    <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="MhD-Ar-GyA" firstAttribute="leading" secondItem="gCN-hB-HBe" secondAttribute="leading" id="X74-bB-DHR"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zKf-y3-e2C"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gCN-hB-HBe" firstAttribute="leading" secondItem="AN4-r2-NXM" secondAttribute="leadingMargin" id="2Gh-1E-rN6"/>
+                            <constraint firstItem="gCN-hB-HBe" firstAttribute="top" secondItem="zKf-y3-e2C" secondAttribute="top" id="OYn-Ts-2ae"/>
+                            <constraint firstItem="zKf-y3-e2C" firstAttribute="trailing" secondItem="gCN-hB-HBe" secondAttribute="trailing" constant="11" id="dk2-p4-grA"/>
+                            <constraint firstItem="zKf-y3-e2C" firstAttribute="bottom" secondItem="gCN-hB-HBe" secondAttribute="bottom" constant="173.5" id="vGf-Xa-Ohy"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NIC-Ff-NLK"/>
                     <connections>
-                        <outlet property="AnnouncementLabel" destination="5O7-Wh-Yc5" id="Ih2-aE-ara"/>
-                        <outlet property="AnnouncementView" destination="5t4-pR-PqR" id="oHo-6Q-0Vc"/>
+                        <outlet property="AnnouncementView" destination="MhD-Ar-GyA" id="cdz-o5-Ljv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tl7-Qu-qCt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

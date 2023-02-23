@@ -9,29 +9,23 @@ import UIKit
 import SwiftUI
 
 class AnnouncementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-        var announcements = ["Announcement 1", "Announcement 2", "Announcement 3"]
-    @IBOutlet weak var AnnouncementLabel: UILabel!
-    var label: UILabel!
-    
+        var announcements = ["Announcement 1", "Announcement 2", "Announcement 3", "Announcement 2", "Announcement 3", "Announcement 2", "Announcement 3", "Announcement 2", "Announcement 3"]
     @IBOutlet weak var AnnouncementView: UITableView!
-    var tableView: UITableView!
         
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            tableView = UITableView(frame: view.bounds, style: .plain)
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-            view.addSubview(tableView)
+            AnnouncementView.delegate = self
+            AnnouncementView.dataSource = self
+        
         }
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        func tableView(_ AnnouncementView: UITableView, numberOfRowsInSection section: Int) -> Int {
             return announcements.count
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        func tableView(_ AnnouncementView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = AnnouncementView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             cell.textLabel?.text = announcements[indexPath.row]
             return cell
         }
