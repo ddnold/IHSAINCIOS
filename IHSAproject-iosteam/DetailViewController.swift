@@ -8,12 +8,31 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var titleOutlet: UILabel!
+    
+    @IBOutlet weak var dateOutlet: UILabel!
+    
+    @IBOutlet weak var timeOutlet: UILabel!
+    
+    @IBOutlet weak var locationOutlet: UILabel!
+    
+    @IBOutlet weak var searchOutlet: UISearchBar!
+    
+    @IBOutlet weak var tableViewOutlet: UITableView!
+    
+    let data = ["riderOne, a School","riderTwo, another School","riderThree, some other School","riderFour, a School","riderFive,  another School"]
+    var filteredData: [String]!
+    
     override func viewDidLoad() {
+        titleOutlet.text! = title!
         super.viewDidLoad()
-
+        filteredData = data
+        tableViewOutlet.backgroundColor = .white // or any other color
+        tableViewOutlet.bounces = true
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*
@@ -27,3 +46,4 @@ class DetailViewController: UIViewController {
     */
 
 }
+
