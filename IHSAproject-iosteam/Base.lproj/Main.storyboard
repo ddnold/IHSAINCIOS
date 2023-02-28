@@ -269,6 +269,21 @@
             </objects>
             <point key="canvasLocation" x="-1686" y="-1230"/>
         </scene>
+        <!--Info View Controller-->
+        <scene sceneID="1hY-sj-EdJ">
+            <objects>
+                <viewController id="uDQ-bm-5ja" customClass="infoViewController" customModule="IHSAproject_iosteam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q3n-Sc-bbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rp7-F3-U5i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dfi-0x-L8N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3675" y="820"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ihsa-stacked-logo" width="496" height="149"/>

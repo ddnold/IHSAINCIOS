@@ -25,7 +25,12 @@ class ViewController: UIViewController {
         filteredData = data
         tableView.backgroundColor = .blue // or any other color
         tableView.bounces = true
+        // Create info button
+        let infoButton = UIButton(type: .infoLight)
+        infoButton.addTarget(self, action: #selector(infoButtonTapped), for: .touchUpInside)
 
+        // Add the info button to the navigation bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: infoButton)
         }
     
     @IBAction func announcementBTN(_ sender: Any) {
@@ -35,6 +40,17 @@ class ViewController: UIViewController {
     
     @IBAction func favoriteBTN(_ sender: Any) {
     }
+    @objc func infoButtonTapped() {
+        performSegue(withIdentifier: "showInfo", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+         if segue.identifier == "showInfo" {
+             // Customize the destination view controller before it's presented
+             // For example, set properties or pass data to the destination view controller
+             let infoViewController = segue.destination as! infoViewController
+             infoViewController.title = "infoViewController"
+         }
+     }
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
