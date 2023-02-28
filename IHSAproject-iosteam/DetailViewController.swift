@@ -21,8 +21,8 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     @IBOutlet weak var tableViewOutlet: UITableView!
     
-    let data = ["Rider One, a School","Rider Two, another School","Rider Three, some other School","Rider Four, a School","Rider Five,  another School"]
-    
+    //sample data
+    let data = ["Rider Class 1, Western ","Rider Class 2","Rider Class 3","Rider Class 4"]
     let date:String = "February 28, 2023"
     let time:String = "10:00 AM"
     let location:String = "1234 1st St. City, State, ZIP"
@@ -88,7 +88,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         self.tableViewOutlet.reloadData()
     }
     
-    /*
      //Rider View Controller setup
      func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             // Get the selected cell and its text label
@@ -100,7 +99,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         riderViewController.title = textLabel.text
         navigationController?.pushViewController(riderViewController, animated: true)
     }
-     */
     
 
 }

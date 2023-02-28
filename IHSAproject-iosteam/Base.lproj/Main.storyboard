@@ -55,13 +55,13 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-29-Yc0">
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="ga6-29-Yc0">
                                         <rect key="frame" x="0.0" y="378" width="414" height="75"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G8g-Gt-MFS" userLabel="announcementBTN">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="75"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="136" height="75"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="square.and.arrow.up.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="filled" image="megaphone.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -70,9 +70,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPC-Pq-6fC" userLabel="actionBTN">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="75"/>
+                                                <rect key="frame" x="139" y="0.0" width="136" height="75"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" image="rectangle.portrait.and.arrow.forward.fill" catalog="system">
+                                                <buttonConfiguration key="configuration" style="filled" image="house.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
@@ -81,7 +81,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaW-TU-oJk" userLabel="favoriteBTN">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="75"/>
+                                                <rect key="frame" x="278" y="0.0" width="136" height="75"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" image="star.fill" catalog="system">
                                                     <color key="baseBackgroundColor" systemColor="systemRedColor"/>
@@ -156,13 +156,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-ea-uN0">
                                         <rect key="frame" x="0.0" y="221" width="394" height="314.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show Order" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwc-LZ-R81">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rwc-LZ-R81">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="29"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" placeholder="Filter by Rider or School" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-hD-8cM">
+                                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" placeholder="Filter by Class" translatesAutoresizingMaskIntoConstraints="NO" id="AQC-hD-8cM">
                                                 <rect key="frame" x="0.0" y="29" width="394" height="56"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="56" id="IbI-Gz-9ep"/>
@@ -214,6 +214,82 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saw-Df-gvB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2069.5652173913045" y="-485.49107142857139"/>
+        </scene>
+        <!--Rider View Controller-->
+        <scene sceneID="W7w-BT-KTJ">
+            <objects>
+                <viewController storyboardIdentifier="RiderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SIt-bb-GA0" customClass="RiderViewController" customModule="IHSAproject_iosteam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="weO-Wz-XMF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ff7-hy-xkR">
+                                <rect key="frame" x="10" y="48" width="394" height="372"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Class" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NXi-FA-hHy">
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="q4H-jq-ud9">
+                                        <rect key="frame" x="0.0" y="57.5" width="394" height="314.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xQ-iE-Aba">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <searchBar contentMode="redraw" horizontalHuggingPriority="1000" text="" placeholder="Filter by Rider or School" translatesAutoresizingMaskIntoConstraints="NO" id="6pH-uG-bEU">
+                                                <rect key="frame" x="0.0" y="29" width="394" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="oUG-85-Lqp"/>
+                                                </constraints>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ulp-ak-r0o"/>
+                                                </connections>
+                                            </searchBar>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zcN-xU-pc8">
+                                                <rect key="frame" x="0.0" y="85" width="394" height="229.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="458" id="CNZ-OC-kYA"/>
+                                                </constraints>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Gg7-PI-ED8">
+                                                        <rect key="frame" x="0.0" y="50" width="394" height="43.5"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gg7-PI-ED8" id="HZm-m3-nS3">
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FAW-St-UZB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ff7-hy-xkR" firstAttribute="leading" secondItem="FAW-St-UZB" secondAttribute="leading" constant="10" id="DaW-kU-wSJ"/>
+                            <constraint firstItem="FAW-St-UZB" firstAttribute="trailing" secondItem="Ff7-hy-xkR" secondAttribute="trailing" constant="10" id="brh-yc-GdK"/>
+                            <constraint firstItem="Ff7-hy-xkR" firstAttribute="top" secondItem="FAW-St-UZB" secondAttribute="top" id="rS9-Hh-rjX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="classOutlet" destination="NXi-FA-hHy" id="oTs-Sz-t9a"/>
+                        <outlet property="searchOutlet" destination="6pH-uG-bEU" id="CaJ-jl-NMb"/>
+                        <outlet property="tableViewOutlet" destination="zcN-xU-pc8" id="yit-m8-ame"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jhY-zQ-302" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2849" y="-485"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MUm-QQ-clQ">
@@ -383,9 +459,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="megaphone.fill" catalog="system" width="128" height="112"/>
         <image name="plus" catalog="system" width="128" height="113"/>
-        <image name="rectangle.portrait.and.arrow.forward.fill" catalog="system" width="128" height="108"/>
-        <image name="square.and.arrow.up.fill" catalog="system" width="115" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
