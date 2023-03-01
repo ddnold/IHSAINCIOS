@@ -19,6 +19,7 @@
 		3FB3EFFB2980701B00DFC224 /* IHSAproject_iosteamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFFA2980701B00DFC224 /* IHSAproject_iosteamTests.swift */; };
 		3FB3F0052980701B00DFC224 /* IHSAproject_iosteamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3F0042980701B00DFC224 /* IHSAproject_iosteamUITests.swift */; };
 		3FB3F0072980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3F0062980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift */; };
+		426302CE29AEE7C700D0500E /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426302CD29AEE7C700D0500E /* infoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		3FB3EFFA2980701B00DFC224 /* IHSAproject_iosteamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamTests.swift; sourceTree = "<group>"; };
 		3FB3F0042980701B00DFC224 /* IHSAproject_iosteamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITests.swift; sourceTree = "<group>"; };
 		3FB3F0062980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		426302CD29AEE7C700D0500E /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */,
 				3FB3EFE72980701A00DFC224 /* ViewController.swift */,
 				37A6251029A54D8E00FDF95F /* DetailViewController.swift */,
+				426302CD29AEE7C700D0500E /* infoViewController.swift */,
 				3FB3EFE92980701A00DFC224 /* Main.storyboard */,
 				3FA108CB29AE98C3002652D7 /* RiderViewController.swift */,
 				3FB3EFEC2980701B00DFC224 /* Assets.xcassets */,
@@ -286,6 +289,7 @@
 				3F13BE8A29A55F71003A5D24 /* AnnouncementViewController.swift in Sources */,
 				3FB3EFE42980701A00DFC224 /* AppDelegate.swift in Sources */,
 				3FB3EFE62980701A00DFC224 /* SceneDelegate.swift in Sources */,
+				426302CE29AEE7C700D0500E /* infoViewController.swift in Sources */,
 				37A6251129A54D8E00FDF95F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

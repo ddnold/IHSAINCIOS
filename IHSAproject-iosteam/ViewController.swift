@@ -29,7 +29,6 @@ class ViewController: UIViewController{
         tableView.backgroundColor = .white // or any other color
         tableView.bounces = true
         setupImageSlider()
-
         }
     
     @IBAction func announcementBTN(_ sender: Any) {
