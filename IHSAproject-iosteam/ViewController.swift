@@ -18,7 +18,7 @@ class ViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
-    let data = ["Show 1","Show 2","Show 3","Show 4","1","2","3","4","5","6","7","8"]
+    let data = ["Black Hawk College Western Show","Show 2","Show 3","Show 4","1","2","3","4","5","6","7","8"]
     var filteredData: [String]!
     override func viewDidLoad() {
         super.viewDidLoad()

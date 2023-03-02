@@ -22,10 +22,10 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     //sample data
-    let data = ["Rider Class 1, Western ","Rider Class 2","Rider Class 3","Rider Class 4"]
-    let date:String = "February 28, 2023"
-    let time:String = "10:00 AM"
-    let location:String = "1234 1st St. City, State, ZIP"
+    let data = ["Class 17, Reining","Class 13, Level I Western, Section A","Class 15, Level II Ranch Riding, Section A","Rider Class 4"]
+    let date:String = "February 26, 2022"
+    let time:String = "9:00 AM"
+    let location:String = "26230 Black Hawk Rd Galva, IL"
     
     var filteredData: [String]!
     

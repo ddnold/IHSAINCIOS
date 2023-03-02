@@ -14,7 +14,7 @@ class RiderViewController: UIViewController, UITableViewDelegate, UISearchBarDel
     @IBOutlet weak var tableViewOutlet: UITableView!
     
     //sample data
-    let data = ["Rider, School","Rider, School","Rider, School","Rider, School","Rider, School","Rider, School"]
+    let data = ["Lily Zomparelli, Black Hawk College","Josie Spratt, Black Hawk College","Anna Wilhelm, Black Hawk College","Morgan DeBuhr, Iowa State University","Brayden Gruben, Missouri State University"]
     var filteredData: [String]!
     
     override func viewDidLoad() {
