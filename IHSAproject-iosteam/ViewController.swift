@@ -38,6 +38,9 @@ class ViewController: UIViewController{
     
     @IBAction func favoriteBTN(_ sender: Any) {
     }
+    @IBAction func infoBtn(_ sender: UIButton) {
+    }
+    let infoBtn = UIButton(type: .infoLight)
     var imageArray = [UIImage]()
     var currentIndex = 0
     func setupImageSlider() {
