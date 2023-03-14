@@ -7,6 +7,7 @@
 
 import UIKit
 import PhotosUI
+import Firebase
 
 class ViewController: UIViewController{
     
@@ -17,7 +18,7 @@ class ViewController: UIViewController{
 
     
     @IBOutlet weak var tableView: UITableView!
-    
+    let database = Database.database().reference()
     let data = ["Black Hawk College Western Show","Show 2","Show 3","Show 4","1","2","3","4","5","6","7","8"]
     var filteredData: [String]!
     override func viewDidLoad() {
