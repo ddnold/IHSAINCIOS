@@ -74,7 +74,7 @@
 		3FB3EFFA2980701B00DFC224 /* IHSAproject_iosteamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamTests.swift; sourceTree = "<group>"; };
 		3FB3F0042980701B00DFC224 /* IHSAproject_iosteamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITests.swift; sourceTree = "<group>"; };
 		3FB3F0062980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		426302CD29AEE7C700D0500E /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = infoViewController.swift; sourceTree = SOURCE_ROOT; };
+		426302CD29AEE7C700D0500E /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = infoViewController.swift; path = ../infoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */

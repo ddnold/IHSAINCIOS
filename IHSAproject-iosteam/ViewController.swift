@@ -32,14 +32,14 @@ class ViewController: UIViewController{
         setupImageSlider()
         }
     
-    @IBAction func announcementBTN(_ sender: Any) {
-    }
-    @IBAction func actionBTN(_ sender: Any) {
-    }
-    
-    @IBAction func favoriteBTN(_ sender: Any) {
-    }
-    @IBAction func infoBtn(_ sender: UIButton) {
+    @IBAction func onInfoPress(_ sender: UIButton) {
+        guard let infoViewController = storyboard?.instantiateViewController(withIdentifier: "infoViewController") as? infoViewController else { return }
+        
+
+        // Get a reference to the navigation controller for the first tab
+        if let navController = tabBarController?.viewControllers?[0] as? UINavigationController {
+            navController.pushViewController(infoViewController, animated: true)
+        }
     }
     let infoBtn = UIButton(type: .infoLight)
     var imageArray = [UIImage]()
@@ -104,17 +104,23 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            // Get the selected cell and its text label
-            let cell = tableView.cellForRow(at: indexPath)
-            guard let textLabel = cell?.textLabel else { return }
-            
-            // Show a new view with the selected text as the title
-            guard let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
-        detailViewController.title = textLabel.text
-        navigationController?.pushViewController(detailViewController, animated: true)
-
+        // Get the selected cell and its text label
+        let cell = tableView.cellForRow(at: indexPath)
+        guard let textLabel = cell?.textLabel else { return }
         
+        // Show a new view with the selected text as the title
+        guard let detailViewController = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController else { return }
+        detailViewController.title = textLabel.text
+        
+        // Get a reference to the navigation controller for the first tab
+        if let navController = tabBarController?.viewControllers?[0] as? UINavigationController {
+            navController.pushViewController(detailViewController, animated: true)
+        }
     }
+
+
+
+
     
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         if !scrollView.isScrollEnabled {
