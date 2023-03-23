@@ -78,13 +78,13 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XL1-8I-UDs">
-                                        <rect key="frame" x="0.0" y="10" width="414" height="109"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="121"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="o1z-oH-tkh"/>
                                         </constraints>
                                     </imageView>
                                     <searchBar contentMode="redraw" horizontalHuggingPriority="1000" text="" placeholder="Shows" translatesAutoresizingMaskIntoConstraints="NO" id="xf8-vH-t94">
-                                        <rect key="frame" x="0.0" y="119" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="131" width="414" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Occ-OT-6fY"/>
                                         </constraints>
@@ -94,7 +94,7 @@
                                         </connections>
                                     </searchBar>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" contentViewInsetsToSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUZ-5a-p18">
-                                        <rect key="frame" x="0.0" y="169" width="414" height="555"/>
+                                        <rect key="frame" x="0.0" y="181" width="414" height="543"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="YdW-W4-kkX">
@@ -380,32 +380,8 @@
                     <view key="view" contentMode="scaleToFill" id="SeO-Kg-I5m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b7e-wc-Td3">
-                                <rect key="frame" x="20" y="92" width="374" height="721"/>
-                                <subviews>
-                                    <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="dPl-xH-YP9">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <connections>
-                                            <outlet property="delegate" destination="Aag-jv-luC" id="sdP-0P-hNN"/>
-                                        </connections>
-                                    </searchBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="4uV-4u-jzv">
-                                        <rect key="frame" x="0.0" y="56" width="374" height="665"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </tableView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qZ5-tw-B9K"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="b7e-wc-Td3" firstAttribute="leading" secondItem="SeO-Kg-I5m" secondAttribute="leadingMargin" id="McL-Je-FEu"/>
-                            <constraint firstItem="b7e-wc-Td3" firstAttribute="trailing" secondItem="SeO-Kg-I5m" secondAttribute="trailingMargin" id="MyX-t9-7sm"/>
-                            <constraint firstItem="b7e-wc-Td3" firstAttribute="top" secondItem="qZ5-tw-B9K" secondAttribute="top" id="WfI-FN-OCt"/>
-                            <constraint firstItem="b7e-wc-Td3" firstAttribute="bottom" secondItem="qZ5-tw-B9K" secondAttribute="bottom" id="erg-nc-uhk"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xvx-NO-leV"/>
                 </viewController>
@@ -593,7 +569,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bOL-DL-7eR"/>
+        <segue reference="sZc-he-240"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bell.fill" catalog="system" width="123" height="128"/>
