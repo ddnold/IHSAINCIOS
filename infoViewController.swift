@@ -14,10 +14,12 @@ class infoViewController: UIViewController {
     //ihsalogo
     @IBOutlet weak var infoimg: UIImageView!
     
+    @IBOutlet weak var infoimg2: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         //creating url for first label; ISHA website
         let infoImageView = UIImageView(frame: CGRect(x:0, y:0, width: 200, height: 200))
+        infoimg2.image = UIImage(named: "image3")
         infoimg.image = UIImage(named: "image1")
         let attributedString = NSMutableAttributedString(string: "IHSA website")
         let url = URL(string: "https://www.ihsainc.com/about-us/general-information")!
