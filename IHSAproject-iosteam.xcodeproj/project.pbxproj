@@ -135,9 +135,9 @@
 				37A6251029A54D8E00FDF95F /* DetailViewController.swift */,
 				426302CD29AEE7C700D0500E /* infoViewController.swift */,
 				3FB3EFE92980701A00DFC224 /* Main.storyboard */,
+				37EE5ECA29C04A3F00136A07 /* GoogleService-Info.plist */,
 				3FA108CB29AE98C3002652D7 /* RiderViewController.swift */,
 				3FB3EFEC2980701B00DFC224 /* Assets.xcassets */,
-				37EE5ECA29C04A3F00136A07 /* GoogleService-Info.plist */,
 				3FB3EFEE2980701B00DFC224 /* LaunchScreen.storyboard */,
 				3FB3EFF12980701B00DFC224 /* Info.plist */,
 			);
