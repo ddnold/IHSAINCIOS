@@ -50,17 +50,17 @@ class ViewController: UIViewController{
             //UIImage(named: "image2")!,
             //UIImage(named: "image3")!]
         if let image = UIImage(named: "image1") {
-            if let resizedImage = image.resize(to: CGSize(width: 400, height: 150)) {
+            if let resizedImage = image.resize(to: CGSize(width: imageView.bounds.width, height: 150)) {
                 imageArray.append(resizedImage)
             }
         }
         if let image = UIImage(named: "image2") {
-            if let resizedImage = image.resize(to: CGSize(width: 400, height: 150)) {
+            if let resizedImage = image.resize(to: CGSize(width: imageView.bounds.width, height: 150)) {
                 imageArray.append(resizedImage)
             }
         }
         if let image = UIImage(named: "image3") {
-            if let resizedImage = image.resize(to: CGSize(width: 400, height: 150)) {
+            if let resizedImage = image.resize(to: CGSize(width: imageView.bounds.width, height: 150)) {
                 imageArray.append(resizedImage)
             }
         }
