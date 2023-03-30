@@ -448,23 +448,23 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bj0-Qx-dbY">
-                                                <rect key="frame" x="0.0" y="50" width="414" height="43.5"/>
+                                                <rect key="frame" x="0.0" y="50" width="414" height="34.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bj0-Qx-dbY" id="ZVp-yA-cA6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-0I-9CJ">
-                                                            <rect key="frame" x="0.0" y="9.5" width="139" height="34"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-0I-9CJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-Cy-80K">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="89" height="34"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="34.5"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-mH-Bcj">
-                                                                    <rect key="frame" x="89" y="0.0" width="50" height="34"/>
+                                                                    <rect key="frame" x="364" y="0.0" width="50" height="34.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="lnc-XZ-6Ym"/>
                                                                     </constraints>
@@ -475,6 +475,9 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="Aa6-0I-9CJ" secondAttribute="trailing" id="0pF-a3-AbK"/>
+                                                        <constraint firstItem="Aa6-0I-9CJ" firstAttribute="top" secondItem="ZVp-yA-cA6" secondAttribute="top" id="1Yl-2K-PD7"/>
+                                                        <constraint firstItem="Aa6-0I-9CJ" firstAttribute="leading" secondItem="ZVp-yA-cA6" secondAttribute="leading" id="FRz-lW-vgJ"/>
                                                         <constraint firstAttribute="bottom" secondItem="Aa6-0I-9CJ" secondAttribute="bottom" id="gJS-eh-PCZ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>

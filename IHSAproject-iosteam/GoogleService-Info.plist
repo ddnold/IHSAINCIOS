@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>15226803629-mp3g8qm8jgdnki0o8ptqlun6pgso0uq1.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.15226803629-mp3g8qm8jgdnki0o8ptqlun6pgso0uq1</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAL1c3ZSZFLW2yyHujEQ-L1QqHDTUDaIVM</string>
+	<key>GCM_SENDER_ID</key>
+	<string>15226803629</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>nwmsu.IHSAproject-iostream</string>
+	<key>PROJECT_ID</key>
+	<string>finalisha-bbd50</string>
+	<key>STORAGE_BUCKET</key>
+	<string>finalisha-bbd50.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:15226803629:ios:8d6d6bf9d2ab5441d4fd24</string>
+	<key>DATABASE_URL</key>
+	<string>https://finalisha-bbd50-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
