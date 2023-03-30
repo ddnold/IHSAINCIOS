@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		370540D729D6172100F71332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 370540D629D6172100F71332 /* GoogleService-Info.plist */; };
+		370540D929D6217600F71332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 370540D829D6217600F71332 /* GoogleService-Info.plist */; };
 		37A6251129A54D8E00FDF95F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6251029A54D8E00FDF95F /* DetailViewController.swift */; };
 		37EE5EC529C0478F00136A07 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE5EC429C0478F00136A07 /* FirebaseAnalytics */; };
 		37EE5EC729C0478F00136A07 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE5EC629C0478F00136A07 /* FirebaseDatabase */; };
@@ -57,7 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		370540D629D6172100F71332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		370540D829D6217600F71332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IHSAproject-iosteam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A13FED2991C0F6001D5445 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A13FEE2991C0F6001D5445 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,9 +135,9 @@
 				37A6251029A54D8E00FDF95F /* DetailViewController.swift */,
 				426302CD29AEE7C700D0500E /* infoViewController.swift */,
 				3FB3EFE92980701A00DFC224 /* Main.storyboard */,
-				370540D629D6172100F71332 /* GoogleService-Info.plist */,
 				3FA108CB29AE98C3002652D7 /* RiderViewController.swift */,
 				3FB3EFEC2980701B00DFC224 /* Assets.xcassets */,
+				370540D829D6217600F71332 /* GoogleService-Info.plist */,
 				3FB3EFEE2980701B00DFC224 /* LaunchScreen.storyboard */,
 				3FB3EFF12980701B00DFC224 /* Info.plist */,
 			);
@@ -275,7 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FB3EFF02980701B00DFC224 /* LaunchScreen.storyboard in Resources */,
-				370540D729D6172100F71332 /* GoogleService-Info.plist in Resources */,
+				370540D929D6217600F71332 /* GoogleService-Info.plist in Resources */,
 				3FB3EFED2980701B00DFC224 /* Assets.xcassets in Resources */,
 				3FB3EFEB2980701A00DFC224 /* Main.storyboard in Resources */,
 			);
