@@ -39,7 +39,7 @@ class infoViewController: UIViewController {
     }
     // Function to handle the tap gesture
     @objc func imageTapped() {
-    guard let url = URL(string: "https://www.example.com") else { return }
+    guard let url = URL(string: "https://www.ihsainc.com/about-us/general-information") else { return }
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
 }
 
