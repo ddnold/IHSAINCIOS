@@ -32,5 +32,15 @@ class infoViewController: UIViewController {
         let range2 = NSRange(location: 0, length: attributedString2.length)
         attributedString2.addAttribute(.link, value: url2, range: range2)
         myLabel2.attributedText = attributedString2
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        infoimg.addGestureRecognizer(tapGesture)
+        infoimg.isUserInteractionEnabled = true
     }
+    // Function to handle the tap gesture
+    @objc func imageTapped() {
+    guard let url = URL(string: "https://www.example.com") else { return }
+    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+}
+
 }
