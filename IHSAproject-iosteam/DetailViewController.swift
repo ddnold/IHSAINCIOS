@@ -47,6 +47,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         filteredData = data
         tableViewOutlet.backgroundColor = .white // or any other color
         tableViewOutlet.bounces = true
+        self.hideKeyboardWhenTappedAround() 
         // Do any additional setup after loading the view.
     }
     
