@@ -23,6 +23,7 @@
 		3FB3EFFB2980701B00DFC224 /* IHSAproject_iosteamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3EFFA2980701B00DFC224 /* IHSAproject_iosteamTests.swift */; };
 		3FB3F0052980701B00DFC224 /* IHSAproject_iosteamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3F0042980701B00DFC224 /* IHSAproject_iosteamUITests.swift */; };
 		3FB3F0072980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FB3F0062980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift */; };
+		3FC51B2D29D61BE600E89D12 /* AnnouncementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC51B2C29D61BE600E89D12 /* AnnouncementDetailViewController.swift */; };
 		426302CE29AEE7C700D0500E /* infoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426302CD29AEE7C700D0500E /* infoViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		3FB3EFFA2980701B00DFC224 /* IHSAproject_iosteamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamTests.swift; sourceTree = "<group>"; };
 		3FB3F0042980701B00DFC224 /* IHSAproject_iosteamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITests.swift; sourceTree = "<group>"; };
 		3FB3F0062980701B00DFC224 /* IHSAproject_iosteamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IHSAproject_iosteamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3FC51B2C29D61BE600E89D12 /* AnnouncementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnouncementDetailViewController.swift; sourceTree = "<group>"; };
 		426302CD29AEE7C700D0500E /* infoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = infoViewController.swift; path = ../infoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				3F13BE8929A55F71003A5D24 /* AnnouncementViewController.swift */,
+				3FC51B2C29D61BE600E89D12 /* AnnouncementDetailViewController.swift */,
 				3FB3EFE32980701A00DFC224 /* AppDelegate.swift */,
 				3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */,
 				3FB3EFE72980701A00DFC224 /* ViewController.swift */,
@@ -308,6 +311,7 @@
 				3FB3EFE42980701A00DFC224 /* AppDelegate.swift in Sources */,
 				3FB3EFE62980701A00DFC224 /* SceneDelegate.swift in Sources */,
 				426302CE29AEE7C700D0500E /* infoViewController.swift in Sources */,
+				3FC51B2D29D61BE600E89D12 /* AnnouncementDetailViewController.swift in Sources */,
 				37A6251129A54D8E00FDF95F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

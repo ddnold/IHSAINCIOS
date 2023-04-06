@@ -1,20 +1,12 @@
-//
-//  AnnouncementScene.swift
-//  IHSAproject-iosteam
-//
-//  Created by Reason on 2/21/23.
-//
-
 import UIKit
-import SwiftUI
-
+import Foundation
+struct Announcement: Codable {
+    let id: Int
+    let name: String
+    let date: String
+    let content: String
+}
 class AnnouncementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    struct Announcement: Codable {
-        let id: Int
-        let name: String
-        let date: String
-        let content: String
-    }
     
     var announcements = [Announcement]()
     @IBOutlet weak var AnnouncementView: UITableView!
@@ -35,6 +27,7 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ AnnouncementView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return announcements.count
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60 // adjust the height as needed
     }
@@ -42,22 +35,42 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let announcement = announcements[indexPath.row]
+        
         // Get reference to title label using tag
-            if let titleLabel = cell.contentView.viewWithTag(1001) as? UILabel {
-                titleLabel.text = announcement.name
-                titleLabel.font = UIFont.boldSystemFont(ofSize: titleLabel.font.pointSize)
+        if let titleLabel = cell.contentView.viewWithTag(1001) as? UILabel {
+            titleLabel.text = announcement.name
+            titleLabel.font = UIFont.boldSystemFont(ofSize: titleLabel.font.pointSize)
+
+        }
+        
+        // Get reference to date label using tag
+        if let dateLabel = cell.contentView.viewWithTag(1002) as? UILabel {
+            dateLabel.text = announcement.date
+        }
+        
+        // Get reference to description label using tag
+        if let descriptionLabel = cell.contentView.viewWithTag(1003) as? UILabel {
+            descriptionLabel.text = announcement.content
+        }
+        
+        return cell
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Perform segue to AnnouncementDetailViewController
+        performSegue(withIdentifier: "announcementDetail", sender: indexPath)
+    }
+
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "announcementDetail" {
+            if let indexPath = AnnouncementView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! AnnouncementDetailViewController
+                // Pass the selected announcement to the AnnouncementDetailViewController
+                destinationController.announcement = announcements[indexPath.row]
 
             }
-            
-            // Get reference to date label using tag
-            if let dateLabel = cell.contentView.viewWithTag(1002) as? UILabel {
-                dateLabel.text = announcement.date
-            }
-            
-            // Get reference to description label using tag
-            if let descriptionLabel = cell.contentView.viewWithTag(1003) as? UILabel {
-                descriptionLabel.text = announcement.content
-            }
-        return cell
+        }
     }
 }
