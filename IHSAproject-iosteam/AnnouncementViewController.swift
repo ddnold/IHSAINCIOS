@@ -18,7 +18,7 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
         AnnouncementView.dataSource = self
         
         // Create sample announcements
-        let announcement1 = Announcement(id: 1, name: "Announcement 1", date: "2023-03-02", content: "Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1")
+        let announcement1 = Announcement(id: 1, name: "Announcement 1", date: "2023-03-02", content: "Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1")
         let announcement2 = Announcement(id: 2, name: "Announcement 2", date: "2023-03-01", content: "This is announcement sample 2")
         let announcement3 = Announcement(id: 3, name: "Announcement 3 Announcement 3", date: "2023-03-03", content: "This is announcement sample 3")
         announcements = [announcement1, announcement2, announcement3]
