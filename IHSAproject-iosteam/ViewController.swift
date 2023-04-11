@@ -30,8 +30,17 @@ class ViewController: UIViewController{
         tableView.backgroundColor = .white // or any other color
         tableView.bounces = true
         setupImageSlider()
-        self.hideKeyboardWhenTappedAround() 
+        self.hideKeyboardWhenTappedAround()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
+        imageView.addGestureRecognizer(tapGesture)
+        imageView.isUserInteractionEnabled = true
         }
+    // Function to handle the tap gesture
+    @objc func imageTapped() {
+    guard let url = URL(string: "https://www.ihsainc.com/about-us/general-information") else { return }
+    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+}
     
     @IBAction func onInfoPress(_ sender: UIButton) {
         guard let infoViewController = storyboard?.instantiateViewController(withIdentifier: "infoViewController") as? infoViewController else { return }

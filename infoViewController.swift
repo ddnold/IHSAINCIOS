@@ -36,6 +36,8 @@ class infoViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         infoimg.addGestureRecognizer(tapGesture)
         infoimg.isUserInteractionEnabled = true
+        infoimg2.addGestureRecognizer(tapGesture)
+        infoimg2.isUserInteractionEnabled = true
     }
     // Function to handle the tap gesture
     @objc func imageTapped() {
