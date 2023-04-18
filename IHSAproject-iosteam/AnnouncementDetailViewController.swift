@@ -2,7 +2,7 @@
 //  AnnouncementDetailViewController.swift
 //  IHSAproject-iosteam
 //
-//  Created by Student on 3/30/23.
+//  Created by Reason on 3/30/23.
 //
 
 import Foundation
