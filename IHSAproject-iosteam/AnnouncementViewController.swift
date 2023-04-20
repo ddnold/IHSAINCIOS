@@ -62,7 +62,7 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Perform segue to AnnouncementDetailViewController
         performSegue(withIdentifier: "announcementDetail", sender: indexPath)
-        sendNotification(title: "New message", body: "You have a new message from John", timeInterval: 5)
+        //sendNotification(title: "New message", body: "You have a new message from John", timeInterval: 5)
 
     }
 
