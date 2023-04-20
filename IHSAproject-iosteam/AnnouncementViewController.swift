@@ -1,11 +1,13 @@
 import UIKit
 import Foundation
 import UserNotifications
+import IHSAproject_iosteam
+
 struct Announcement: Codable {
     let id: Int
-    let name: String
+    let title: String
     let date: String
-    let content: String
+    let text: String
 }
 class AnnouncementViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -14,14 +16,13 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
         
     override func viewDidLoad() {
         super.viewDidLoad()
-            
         AnnouncementView.delegate = self
         AnnouncementView.dataSource = self
         
         // Create sample announcements
-        let announcement1 = Announcement(id: 1, name: "Announcement 1", date: "2023-03-02", content: "Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1")
-        let announcement2 = Announcement(id: 2, name: "Announcement 2", date: "2023-03-01", content: "This is announcement sample 2")
-        let announcement3 = Announcement(id: 3, name: "Announcement 3 Announcement 3", date: "2023-03-03", content: "This is announcement sample 3")
+        let announcement1 = Announcement(id: 1, title: "Announcement 1", date: "2023-03-02", text: "Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1 Announcement sample 1")
+        let announcement2 = Announcement(id: 2, title: "Announcement 2", date: "2023-03-01", text: "This is announcement sample 2")
+        let announcement3 = Announcement(id: 3, title: "Announcement 3 Announcement 3", date: "2023-03-03", text: "This is announcement sample 3")
         announcements = [announcement1, announcement2, announcement3]
     }
         
@@ -39,7 +40,7 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
         
         // Get reference to title label using tag
         if let titleLabel = cell.contentView.viewWithTag(1001) as? UILabel {
-            titleLabel.text = announcement.name
+            titleLabel.text = announcement.title
             titleLabel.font = UIFont.boldSystemFont(ofSize: titleLabel.font.pointSize)
 
         }
@@ -51,7 +52,7 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
         
         // Get reference to description label using tag
         if let descriptionLabel = cell.contentView.viewWithTag(1003) as? UILabel {
-            descriptionLabel.text = announcement.content
+            descriptionLabel.text = announcement.text
         }
         
         return cell
@@ -61,6 +62,8 @@ class AnnouncementViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         // Perform segue to AnnouncementDetailViewController
         performSegue(withIdentifier: "announcementDetail", sender: indexPath)
+        sendNotification(title: "New message", body: "You have a new message from John", timeInterval: 5)
+
     }
 
 

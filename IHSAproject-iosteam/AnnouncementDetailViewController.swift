@@ -16,8 +16,8 @@ class AnnouncementDetailViewController: UIViewController {
 
         override func viewDidLoad() {
             super.viewDidLoad()
-            titleLabel.text = announcement?.name
-            contentLabel.text = announcement?.content
+            titleLabel.text = announcement?.title
+            contentLabel.text = announcement?.text
         }
         
 }

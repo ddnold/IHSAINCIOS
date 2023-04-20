@@ -18,3 +18,20 @@ func requestNotificationPermission() {
     }
 }
 
+public func sendNotification(title: String, body: String, timeInterval: TimeInterval) {
+    let content = UNMutableNotificationContent()
+    content.title = title
+    content.body = body
+    content.sound = UNNotificationSound.default
+
+    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: timeInterval, repeats: false)
+    let request = UNNotificationRequest(identifier: "notification", content: content, trigger: trigger)
+
+    UNUserNotificationCenter.current().add(request, withCompletionHandler: { error in
+        if let error = error {
+            print("Error adding notification: \(error.localizedDescription)")
+        } else {
+            print("Notification added successfully")
+        }
+    })
+}
