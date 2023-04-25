@@ -17,7 +17,7 @@ func requestNotificationPermission() {
         }
     }
 }
-
+//Notification func 
 public func sendNotification(title: String, body: String, timeInterval: TimeInterval) {
     let content = UNMutableNotificationContent()
     content.title = title

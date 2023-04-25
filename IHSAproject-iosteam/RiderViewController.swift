@@ -22,6 +22,7 @@ class RiderViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     let data = ["Lily Zomparelli, Black Hawk College","Josie Spratt, Black Hawk College","Anna Wilhelm, Black Hawk College","Morgan DeBuhr, Iowa State University","Brayden Gruben, Missouri State University"]
     
+    //Input rider(#) with name and school
     override func viewDidLoad() {
         super.viewDidLoad()
         let rider1 = Rider(id:0, name: "Lily Zomparelli", school: "Black Hawk College")
