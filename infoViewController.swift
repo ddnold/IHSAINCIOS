@@ -8,6 +8,7 @@
 import UIKit
 
 class infoViewController: UIViewController {
+    //Variables for UILABEL AND UIIMAGE
     @IBOutlet weak var myLabel1: UILabel!
     @IBOutlet weak var myLabel2: UILabel!
     
@@ -19,6 +20,7 @@ class infoViewController: UIViewController {
         super.viewDidLoad()
         //creating url for first label; ISHA website
         let infoImageView = UIImageView(frame: CGRect(x:0, y:0, width: 200, height: 200))
+        //Using Image from assets
         infoimg2.image = UIImage(named: "image3")
         infoimg.image = UIImage(named: "image1")
         let attributedString = NSMutableAttributedString(string: "IHSA website")
@@ -33,13 +35,14 @@ class infoViewController: UIViewController {
         attributedString2.addAttribute(.link, value: url2, range: range2)
         myLabel2.attributedText = attributedString2
         
+        //Making it so users in interact with images by clicking them
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         infoimg.addGestureRecognizer(tapGesture)
         infoimg.isUserInteractionEnabled = true
         infoimg2.addGestureRecognizer(tapGesture)
         infoimg2.isUserInteractionEnabled = true
     }
-    // Function to handle the tap gesture
+    // Function to handle the tap gesture and uses IHSA Website to link image1 and 3 to it
     @objc func imageTapped() {
     guard let url = URL(string: "https://www.ihsainc.com/about-us/general-information") else { return }
     UIApplication.shared.open(url, options: [:], completionHandler: nil)
