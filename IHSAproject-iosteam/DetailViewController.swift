@@ -31,7 +31,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //Add attributes to pull data from "data" to populate Strings
         titleOutlet.text! = title!
         dateOutlet.text! = date
         timeOutlet.text! = time
@@ -44,6 +44,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
         
         searchOutlet.delegate = self
         
+        //set background color
         filteredData = data
         tableViewOutlet.backgroundColor = .white // or any other color
         tableViewOutlet.bounces = true
