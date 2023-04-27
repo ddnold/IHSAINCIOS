@@ -10,6 +10,8 @@
 		370540D929D6217600F71332 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 370540D829D6217600F71332 /* GoogleService-Info.plist */; };
 		370540E329F19E5A00F71332 /* LocalFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370540E229F19E5A00F71332 /* LocalFavoritesViewController.swift */; };
 		370540E529F19E6D00F71332 /* RemoteFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370540E429F19E6D00F71332 /* RemoteFavoritesViewController.swift */; };
+		370540E729FAC9E000F71332 /* FirestoreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 370540E629FAC9E000F71332 /* FirestoreController.swift */; };
+		370540E929FACA4A00F71332 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 370540E829FACA4A00F71332 /* FirebaseFirestore */; };
 		37A6251129A54D8E00FDF95F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37A6251029A54D8E00FDF95F /* DetailViewController.swift */; };
 		37EE5EC529C0478F00136A07 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE5EC429C0478F00136A07 /* FirebaseAnalytics */; };
 		37EE5EC729C0478F00136A07 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 37EE5EC629C0478F00136A07 /* FirebaseDatabase */; };
@@ -64,6 +66,7 @@
 		370540D829D6217600F71332 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		370540E229F19E5A00F71332 /* LocalFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalFavoritesViewController.swift; sourceTree = "<group>"; };
 		370540E429F19E6D00F71332 /* RemoteFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFavoritesViewController.swift; sourceTree = "<group>"; };
+		370540E629FAC9E000F71332 /* FirestoreController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreController.swift; sourceTree = "<group>"; };
 		375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IHSAproject-iosteam.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A13FED2991C0F6001D5445 /* IHSAproject-iosteamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37A13FEE2991C0F6001D5445 /* IHSAproject-iosteamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IHSAproject-iosteamUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -91,6 +94,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37EE5EC929C0478F00136A07 /* FirebaseDatabaseSwift in Frameworks */,
+				370540E929FACA4A00F71332 /* FirebaseFirestore in Frameworks */,
 				37EE5EC729C0478F00136A07 /* FirebaseDatabase in Frameworks */,
 				37EE5EC529C0478F00136A07 /* FirebaseAnalytics in Frameworks */,
 			);
@@ -142,6 +146,7 @@
 				3FB3EFE32980701A00DFC224 /* AppDelegate.swift */,
 				3FB3EFE52980701A00DFC224 /* SceneDelegate.swift */,
 				3FB3EFE72980701A00DFC224 /* ViewController.swift */,
+				370540E629FAC9E000F71332 /* FirestoreController.swift */,
 				370540E229F19E5A00F71332 /* LocalFavoritesViewController.swift */,
 				370540E429F19E6D00F71332 /* RemoteFavoritesViewController.swift */,
 				37A6251029A54D8E00FDF95F /* DetailViewController.swift */,
@@ -194,6 +199,7 @@
 				37EE5EC429C0478F00136A07 /* FirebaseAnalytics */,
 				37EE5EC629C0478F00136A07 /* FirebaseDatabase */,
 				37EE5EC829C0478F00136A07 /* FirebaseDatabaseSwift */,
+				370540E829FACA4A00F71332 /* FirebaseFirestore */,
 			);
 			productName = "IHSAproject-iosteam";
 			productReference = 375E09AB2990C680001EDFA5 /* IHSAproject-iosteam.app */;
@@ -317,6 +323,7 @@
 				3FB3EFE82980701A00DFC224 /* ViewController.swift in Sources */,
 				3FA108CC29AE98C3002652D7 /* RiderViewController.swift in Sources */,
 				3F13BE8A29A55F71003A5D24 /* AnnouncementViewController.swift in Sources */,
+				370540E729FAC9E000F71332 /* FirestoreController.swift in Sources */,
 				3FB3EFE42980701A00DFC224 /* AppDelegate.swift in Sources */,
 				370540E329F19E5A00F71332 /* LocalFavoritesViewController.swift in Sources */,
 				3FC51BB329EF227600E89D12 /* NotificationService.swift in Sources */,
@@ -675,6 +682,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		370540E829FACA4A00F71332 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 37EE5EC329C0478F00136A07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		37EE5EC429C0478F00136A07 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 37EE5EC329C0478F00136A07 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
