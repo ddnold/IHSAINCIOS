@@ -3,34 +3,32 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>15226803629-mp3g8qm8jgdnki0o8ptqlun6pgso0uq1.apps.googleusercontent.com</string>
+	<string>763059959153-6h5lovtbnukum7i9cr769pg6adt1p0d6.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.15226803629-mp3g8qm8jgdnki0o8ptqlun6pgso0uq1</string>
+	<string>com.googleusercontent.apps.763059959153-6h5lovtbnukum7i9cr769pg6adt1p0d6</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAL1c3ZSZFLW2yyHujEQ-L1QqHDTUDaIVM</string>
+	<string>AIzaSyA6w-4IwZS4cAiT2mHkPHAsT7IDZtoaMVk</string>
 	<key>GCM_SENDER_ID</key>
-	<string>15226803629</string>
+	<string>763059959153</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>nwmsu.IHSAproject-iostream</string>
+	<string>nwmsu.ISHAproject-iostream</string>
 	<key>PROJECT_ID</key>
-	<string>finalisha-bbd50</string>
+	<string>testproject-93009</string>
 	<key>STORAGE_BUCKET</key>
-	<string>finalisha-bbd50.appspot.com</string>
+	<string>testproject-93009.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:15226803629:ios:8d6d6bf9d2ab5441d4fd24</string>
-	<key>DATABASE_URL</key>
-	<string>https://finalisha-bbd50-default-rtdb.firebaseio.com</string>
+	<string>1:763059959153:ios:c81d8241827c640aa3f2d0</string>
 </dict>
 </plist>
