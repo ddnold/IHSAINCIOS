@@ -81,5 +81,33 @@ class FirestoreController {
             }
         }
     }
+    
+    func getUnsavedRiders(completion: @escaping ([Rider]) -> Void) {
+        getAllRiders { (riders) in
+            var unsavedRiders: [Rider] = []
+            for rider in riders {
+                if !UserDefaults.standard.bool(forKey: rider.Id) {
+                    unsavedRiders.append(rider)
+                }
+            }
+            completion(unsavedRiders)
+        }
+    }
+
+    func getSavedRiders(completion: @escaping ([Rider]) -> Void) {
+        getAllRiders { (riders) in
+            var savedRiders: [Rider] = []
+            for rider in riders {
+                if UserDefaults.standard.bool(forKey: rider.Id) {
+                    savedRiders.append(rider)
+                }
+            }
+            completion(savedRiders)
+        }
+    }
+
+    func saveRiderLocally(rider: Rider) {
+        UserDefaults.standard.set(true, forKey: rider.Id)
+    }
 
 }
