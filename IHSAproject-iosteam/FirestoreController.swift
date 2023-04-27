@@ -21,7 +21,7 @@ class FirestoreController {
         let EventOrder: [[String: Any]]
     }
     
-    struct Rider {
+    struct Rider: Codable {
         let Id: String
         let FirstName: String
         let LastName: String
@@ -29,8 +29,27 @@ class FirestoreController {
         let RiderId: Int
         
         var name: String {
-                return "\(FirstName) \(LastName)"
-            }
+            return "\(FirstName) \(LastName)"
+        }
+        
+        // Define CodingKeys enumeration to map struct's properties to keys in the encoded data
+        enum CodingKeys: String, CodingKey {
+            case Id
+            case FirstName
+            case LastName
+            case School
+            case RiderId
+        }
+        
+        // Implement the encode(to:) method to encode struct's properties using CodingKeys enumeration
+        func encode(to encoder: Encoder) throws {
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            try container.encode(Id, forKey: .Id)
+            try container.encode(FirstName, forKey: .FirstName)
+            try container.encode(LastName, forKey: .LastName)
+            try container.encode(School, forKey: .School)
+            try container.encode(RiderId, forKey: .RiderId)
+        }
     }
 
     /* Announcments is not present currently in the database but will need to be added as well for full app functionality*/
@@ -109,5 +128,22 @@ class FirestoreController {
     func saveRiderLocally(rider: Rider) {
         UserDefaults.standard.set(true, forKey: rider.Id)
     }
+    
+    func removeRiderLocally(rider: Rider) {
+        if var savedRiders = UserDefaults.standard.object(forKey: "savedRiders") as? [String] {
+            // Remove the rider ID from the saved riders array
+            savedRiders.removeAll(where: { $0 == rider.Id })
+            
+            // Save the updated saved riders array back to user defaults
+            UserDefaults.standard.set(savedRiders, forKey: "savedRiders")
+            
+            // Remove the rider from the locally stored riders array
+            if var localRiders = UserDefaults.standard.object(forKey: "localRiders") as? [Rider] {
+                localRiders.removeAll(where: { $0.Id == rider.Id })
+                UserDefaults.standard.set(try? PropertyListEncoder().encode(localRiders), forKey: "localRiders")
+            }
+        }
+    }
+
 
 }
