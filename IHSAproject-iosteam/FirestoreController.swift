@@ -115,35 +115,50 @@ class FirestoreController {
 
     func getSavedRiders(completion: @escaping ([Rider]) -> Void) {
         getAllRiders { (riders) in
+            // Retrieve the locally stored riders dictionary
+            let localRiders = UserDefaults.standard.dictionary(forKey: "localRiders") as? [String: Data] ?? [:]
+            
             var savedRiders: [Rider] = []
             for rider in riders {
-                if UserDefaults.standard.bool(forKey: rider.Id) {
-                    savedRiders.append(rider)
+                if localRiders.keys.contains(rider.Id) {
+                    // Decode the rider data from the local riders dictionary using PropertyListDecoder
+                    if let riderData = localRiders[rider.Id], let decodedRider = try? PropertyListDecoder().decode(Rider.self, from: riderData) {
+                        savedRiders.append(decodedRider)
+                    }
                 }
             }
             completion(savedRiders)
         }
     }
 
+
     func saveRiderLocally(rider: Rider) {
-        UserDefaults.standard.set(true, forKey: rider.Id)
+        // Retrieve the locally stored riders dictionary
+        var localRiders = UserDefaults.standard.dictionary(forKey: "localRiders") as? [String: Data] ?? [:]
+        
+        // Encode the rider object to data using PropertyListEncoder
+        let riderData = try? PropertyListEncoder().encode(rider)
+        
+        // Store the rider data in the local riders dictionary with the rider ID as the key
+        localRiders[rider.Id] = riderData
+        
+        // Save the updated local riders dictionary back to user defaults
+        UserDefaults.standard.set(localRiders, forKey: "localRiders")
     }
-    
+
     func removeRiderLocally(rider: Rider) {
-        if var savedRiders = UserDefaults.standard.object(forKey: "savedRiders") as? [String] {
-            // Remove the rider ID from the saved riders array
-            savedRiders.removeAll(where: { $0 == rider.Id })
-            
-            // Save the updated saved riders array back to user defaults
-            UserDefaults.standard.set(savedRiders, forKey: "savedRiders")
-            
-            // Remove the rider from the locally stored riders array
-            if var localRiders = UserDefaults.standard.object(forKey: "localRiders") as? [Rider] {
-                localRiders.removeAll(where: { $0.Id == rider.Id })
-                UserDefaults.standard.set(try? PropertyListEncoder().encode(localRiders), forKey: "localRiders")
-            }
-        }
+        // Retrieve the locally stored riders dictionary
+        var localRiders = UserDefaults.standard.dictionary(forKey: "localRiders") as? [String: Data] ?? [:]
+        
+        // Remove the rider from the local riders dictionary using the rider ID as the key
+        localRiders.removeValue(forKey: rider.Id)
+        
+        // Save the updated local riders dictionary back to user defaults
+        UserDefaults.standard.set(localRiders, forKey: "localRiders")
     }
+
+
+
 
 
 }

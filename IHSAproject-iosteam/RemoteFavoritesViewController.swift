@@ -11,8 +11,9 @@ import UIKit
 
 class RemoteFavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
     UISearchBarDelegate{
-    
-    private var filteredData: [Rider] = [] // Declare filteredData here
+    var unsavedRiders: [FirestoreController.Rider] = []
+
+    var filteredData: [FirestoreController.Rider] = [] // Declare filteredData here
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -26,9 +27,13 @@ class RemoteFavoritesViewController: UIViewController, UITableViewDataSource, UI
               let indexPath = tableView.indexPath(for: cell) else {
             return
         }
-        userRiders.remove(at: indexPath.row)
-        // Remove rider from database or other data storage here
+        let riderToRemove = unsavedRiders[indexPath.row]
+        unsavedRiders.remove(at: indexPath.row)
+        filteredData = unsavedRiders // Update filteredData to reflect deletion
         tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        // Save removed rider locally
+        FirestoreController().saveRiderLocally(rider: riderToRemove)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +50,7 @@ class RemoteFavoritesViewController: UIViewController, UITableViewDataSource, UI
         }
         //get element with tag 2002, set rider name
         if let school = cell.contentView.viewWithTag(3007) as? UILabel {
-            school.text = riders.school
+            school.text = riders.School
         }
         if let button = cell.contentView.viewWithTag(3005) as? UIButton {
             button.tag = indexPath.row
@@ -57,12 +62,12 @@ class RemoteFavoritesViewController: UIViewController, UITableViewDataSource, UI
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         if searchText.isEmpty {
             // If search text is empty, show all riders
-            filteredData = userRiders
+            filteredData = unsavedRiders
         } else {
             // Filter riders whose name or school contains the search text
-            filteredData = userRiders.filter { rider in
+            filteredData = unsavedRiders.filter { rider in
                 let nameRange = rider.name.range(of: searchText, options: .caseInsensitive)
-                let schoolRange = rider.school.range(of: searchText, options: .caseInsensitive)
+                let schoolRange = rider.School.range(of: searchText, options: .caseInsensitive)
                 return nameRange != nil || schoolRange != nil
             }
         }
@@ -80,17 +85,19 @@ class RemoteFavoritesViewController: UIViewController, UITableViewDataSource, UI
         searchBar.delegate = self
 
         
-        let rider1 = Rider(name: "John", school: "Northwest", id: 1)
-        let rider2 = Rider(name: "Jane", school: "Midwest", id: 2)
-        let rider3 = Rider(name: "JohnD", school: "Northwest", id: 1)
-        let rider4 = Rider(name: "JaneD", school: "Midwest", id: 2)
-        userRiders = [rider1, rider2, rider3, rider4]
-        filteredData = userRiders
+        FirestoreController().getUnsavedRiders { [weak self] (riders) in
+                self?.unsavedRiders = riders
+                self?.filteredData = riders
+                self?.tableView.reloadData()
+            }
+        
         tableView.reloadData()
         
         
         
     }
+    
+    
 }
 
 

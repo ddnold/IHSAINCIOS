@@ -8,15 +8,12 @@
 import Foundation
 import UIKit
 
-struct Rider {
-    let name: String
-    let school: String
-    let id: Int
-}
 
-var userRiders: [Rider] = []
+
 
 class LocalFavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+    
+    var savedRiders: [FirestoreController.Rider] = []
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,19 +26,22 @@ class LocalFavoritesViewController: UIViewController, UITableViewDataSource, UIT
               let indexPath = tableView.indexPath(for: cell) else {
             return
         }
-        userRiders.remove(at: indexPath.row)
+        let riderToRemove = savedRiders[indexPath.row]
+        savedRiders.remove(at: indexPath.row)
         // Remove rider from database or other data storage here
         tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        FirestoreController().removeRiderLocally(rider: riderToRemove)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userRiders.count
+        return savedRiders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
         //cell.textLabel?.text = filteredData[indexPath.row]
-        let riders = userRiders[indexPath.row]
+        let riders = savedRiders[indexPath.row]
         
         //get element with tag 2001, set rider name
         if let name = cell.contentView.viewWithTag(3000) as? UILabel {
@@ -49,7 +49,7 @@ class LocalFavoritesViewController: UIViewController, UITableViewDataSource, UIT
         }
         //get element with tag 2002, set rider name
         if let school = cell.contentView.viewWithTag(3001) as? UILabel {
-            school.text = riders.school
+            school.text = riders.School
         }
         if let button = cell.contentView.viewWithTag(3002) as? UIButton {
             button.tag = indexPath.row
@@ -66,20 +66,26 @@ class LocalFavoritesViewController: UIViewController, UITableViewDataSource, UIT
         tableView.delegate = self
         tableView.isEditing = false
         
-        let rider1 = Rider(name: "John", school: "Northwest", id: 1)
-        let rider2 = Rider(name: "Jane", school: "Midwest", id: 2)
-        let rider3 = Rider(name: "JohnD", school: "Northwest", id: 1)
-        let rider4 = Rider(name: "JaneD", school: "Midwest", id: 2)
-        userRiders = [rider1, rider2, rider3, rider4]
+        FirestoreController().getSavedRiders { [weak self] (riders) in
+                self?.savedRiders = riders
+                self?.tableView.reloadData()
+            }
+        
         tableView.reloadData()
         
         
         
     }
     
-    
-    
-    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // Fetch saved riders
+        FirestoreController().getSavedRiders { [weak self] (riders) in
+            self?.savedRiders = riders
+            self?.tableView.reloadData()
+        }
+    }
 }
 
 
