@@ -98,6 +98,66 @@ class ViewController: UIViewController{
                                   completion: nil)
             }
         }
+    /*
+    var imagePicker = UIImagePickerController()
+     
+    @IBAction func selectImage(_ sender: Any) {
+        var configuration = PHPickerConfiguration()
+        configuration.filter = .images
+        configuration.selectionLimit = 6
+        let picker = PHPickerViewController(configuration: configuration)
+        picker.delegate = self
+        present(picker, animated: true, completion: nil)
+    }
+
+    
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        self.imageArray.removeAll()
+        for result in results {
+            if result.itemProvider.canLoadObject(ofClass: UIImage.self) {
+                result.itemProvider.loadObject(ofClass: UIImage.self) { image, error in
+                    if let error = error {
+                        print("Error loading image: \(error.localizedDescription)")
+                    } else if let image = image as? UIImage {
+                        let uniqueFilename = self.generateUniqueFilename()
+                        if self.saveImage(image, withFilename: uniqueFilename) {
+                            self.imageArray.append(image)
+                        }
+                    }
+                }
+            }
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
+
+    func generateUniqueFilename() -> String {
+            let uuid = UUID().uuidString
+            let filename = "\(uuid).jpg"
+            return filename
+        }
+    
+    func saveImage(_ image: UIImage, withFilename filename: String) -> Bool {
+        guard let data = image.jpegData(compressionQuality: 1.0) else {
+            return false
+        }
+        guard let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent(filename) else {
+            return false
+        }
+        do {
+            try data.write(to: url)
+            return true
+        } catch {
+            print("Error saving image: \(error.localizedDescription)")
+            return false
+        }
+    }
+
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        let documentsDirectory = paths[0]
+        return documentsDirectory
+    }
+    */
 }
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
