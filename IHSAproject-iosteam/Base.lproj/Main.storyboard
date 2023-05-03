@@ -401,7 +401,7 @@
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" image="star.fill" catalog="system"/>
                                                                     <connections>
-                                                                        <action selector="removeRiderButtonTapped:" destination="7Qp-5V-gUp" eventType="touchUpInside" id="604-MR-uJm"/>
+                                                                        <action selector="removeRiderButtonTapped:" destination="7Qp-5V-gUp" eventType="touchUpInside" id="Mhi-so-YsZ"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -436,17 +436,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="XRY-Dl-4vV"/>
                     <connections>
-                        <outlet property="tableView" destination="0ak-nq-EiI" id="RPB-Cq-a5V"/>
+                        <outlet property="tableView" destination="0ak-nq-EiI" id="6Oq-WF-xR2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8g-qM-S1b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4801.449275362319" y="337.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Remote Favorites View Controller-->
         <scene sceneID="wp7-Ii-H8B">
             <objects>
-                <viewController id="Aag-jv-luC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RemoteFavoritesViewControllerScene" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aag-jv-luC" customClass="RemoteFavoritesViewController" customModule="IHSAproject_iosteam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SeO-Kg-I5m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -461,33 +461,48 @@
                                             <outlet property="delegate" destination="Aag-jv-luC" id="eBc-qH-16G"/>
                                         </connections>
                                     </searchBar>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VcQ-G2-WLe">
+                                    <tableView clipsSubviews="YES" tag="3004" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="VcQ-G2-WLe">
                                         <rect key="frame" x="0.0" y="270" width="414" height="451"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="bj0-Qx-dbY">
-                                                <rect key="frame" x="0.0" y="50" width="414" height="34.5"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="bj0-Qx-dbY">
+                                                <rect key="frame" x="0.0" y="50" width="414" height="41.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bj0-Qx-dbY" id="ZVp-yA-cA6">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aa6-0I-9CJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="34.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="41.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rider Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-Cy-80K">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="34.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-mH-Bcj">
-                                                                    <rect key="frame" x="364" y="0.0" width="50" height="34.5"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="73E-WT-W7j">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="364" height="41.5"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3006" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rider Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WgW-Cy-80K">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="364" height="21"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" tag="3007" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rider School" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ng9-sA-iVe" userLabel="Rider School">
+                                                                            <rect key="frame" x="0.0" y="21" width="364" height="20.5"/>
+                                                                            <accessibility key="accessibilityConfiguration" identifier="School"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                                <button opaque="NO" tag="3005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1B-mH-Bcj">
+                                                                    <rect key="frame" x="364" y="0.0" width="50" height="41.5"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="50" id="lnc-XZ-6Ym"/>
                                                                     </constraints>
                                                                     <state key="normal" title="Button"/>
                                                                     <buttonConfiguration key="configuration" style="filled" image="star" catalog="system"/>
+                                                                    <connections>
+                                                                        <action selector="removeRiderButtonTapped:" destination="Aag-jv-luC" eventType="touchUpInside" id="RuP-51-Fix"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -499,8 +514,13 @@
                                                         <constraint firstAttribute="bottom" secondItem="Aa6-0I-9CJ" secondAttribute="bottom" id="gJS-eh-PCZ"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <accessibility key="accessibilityConfiguration" identifier="cell"/>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Aag-jv-luC" id="wLi-f3-rii"/>
+                                            <outlet property="delegate" destination="Aag-jv-luC" id="YaH-ns-vmh"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                             </stackView>
@@ -515,6 +535,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xvx-NO-leV"/>
+                    <connections>
+                        <outlet property="searchBar" destination="V1A-Os-sda" id="see-0n-TTa"/>
+                        <outlet property="tableView" destination="VcQ-G2-WLe" id="Afc-BM-M3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cmH-aL-Jze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

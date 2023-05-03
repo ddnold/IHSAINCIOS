@@ -128,16 +128,6 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         }
     }
 
-
-
-
-    
-    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        if !scrollView.isScrollEnabled {
-            scrollView.isScrollEnabled = true
-        }
-    }
-
     
 }
 

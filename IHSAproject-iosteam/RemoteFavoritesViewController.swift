@@ -6,43 +6,92 @@
 //
 
 import Foundation
-/*
-func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return riders.count
-}
+import UIKit
 
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
-    //cell.textLabel?.text = filteredData[indexPath.row]
-    let rider = riders[indexPath.row]
+
+class RemoteFavoritesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate,
+    UISearchBarDelegate{
     
-    //get element with tag 2001, set rider name
-    if let name = cell.contentView.viewWithTag(2001) as? UILabel {
-        name.text = rider.name
-    }
-    //get element with tag 2002, set rider name
-    if let school = cell.contentView.viewWithTag(2002) as? UILabel {
-        school.text = rider.school
-    }
+    private var filteredData: [Rider] = [] // Declare filteredData here
+
+    @IBOutlet var searchBar: UISearchBar!
+    @IBOutlet weak var tableView: UITableView!
     
-    //get element with tag 2003, set favorite status
-    if let favoriteButton = cell.contentView.viewWithTag(2003) as? UIButton {
-        if rider.favorite {
-            favoriteButton.setTitle("Unfavorite", for: .normal)
-        } else {
-            favoriteButton.setTitle("Favorite", for: .normal)
+    @IBAction func removeRiderButtonTapped(_ sender: UIButton) {
+        var superview = sender.superview
+        while let view = superview, !(view is UITableViewCell) {
+            superview = view.superview
         }
-        favoriteButton.addTarget(self, action: #selector(favoriteButtonTapped(_:)), for: .touchUpInside)
-        favoriteButton.tag = indexPath.row
+        guard let cell = superview as? UITableViewCell,
+              let indexPath = tableView.indexPath(for: cell) else {
+            return
+        }
+        userRiders.remove(at: indexPath.row)
+        // Remove rider from database or other data storage here
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return filteredData.count
     }
     
-    return cell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for:indexPath)
+        let riders = filteredData[indexPath.row]
+        
+        //get element with tag 2001, set rider name
+        if let name = cell.contentView.viewWithTag(3006) as? UILabel {
+            name.text = riders.name
+        }
+        //get element with tag 2002, set rider name
+        if let school = cell.contentView.viewWithTag(3007) as? UILabel {
+            school.text = riders.school
+        }
+        if let button = cell.contentView.viewWithTag(3005) as? UIButton {
+            button.tag = indexPath.row
+            button.addTarget(self, action: #selector(removeRiderButtonTapped(_:)), for: .touchUpInside)
+        }
+        return cell
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty {
+            // If search text is empty, show all riders
+            filteredData = userRiders
+        } else {
+            // Filter riders whose name or school contains the search text
+            filteredData = userRiders.filter { rider in
+                let nameRange = rider.name.range(of: searchText, options: .caseInsensitive)
+                let schoolRange = rider.school.range(of: searchText, options: .caseInsensitive)
+                return nameRange != nil || schoolRange != nil
+            }
+        }
+        tableView.reloadData()
+    }
+
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.isEditing = false
+        searchBar.delegate = self
+
+        
+        let rider1 = Rider(name: "John", school: "Northwest", id: 1)
+        let rider2 = Rider(name: "Jane", school: "Midwest", id: 2)
+        let rider3 = Rider(name: "JohnD", school: "Northwest", id: 1)
+        let rider4 = Rider(name: "JaneD", school: "Midwest", id: 2)
+        userRiders = [rider1, rider2, rider3, rider4]
+        filteredData = userRiders
+        tableView.reloadData()
+        
+        
+        
+    }
 }
 
-@objc func favoriteButtonTapped(_ sender: UIButton) {
-    let row = sender.tag
-    var rider = riders[row]
-    rider.favorite = !rider.favorite // toggle favorite status
-    riders[row] = rider
-    tableViewOutlet.reloadRows(at:
- */
+
+
